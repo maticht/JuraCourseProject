@@ -60,7 +60,7 @@ const ExpensesTracker = () => {
         <PageContainer>
             <Wrapper>
                 <LeftSide>
-                    <h2>Категории</h2>
+                    <h2 style={{margin:'20px 0 15px 0'}}>Категории</h2>
                     <SelectCategory size="s" onChange={handleCategoryChange}/>
                 </LeftSide>
                 <div style={{
@@ -70,7 +70,7 @@ const ExpensesTracker = () => {
                     padding: '0 10px',
                     justifyContent: 'center'
                 }}>
-                    <h2>Добавить расход</h2>
+                    <h2 style={{margin:'10px 0 15px 0'}}>Добавить расход</h2>
                     <InterestingInput
                         type="number"
                         placeholder="Сумма"
@@ -88,7 +88,7 @@ const ExpensesTracker = () => {
                     </InterestingButton>
                 </div>
                 <RightSide>
-                    <h2>Траты по категории: {selectedCategory}</h2>
+                    <h2 style={{margin:'10px 0 15px 0'}}>Траты по категории: {selectedCategory}</h2>
                     <div style={{display: 'flex', flexDirection: 'column', height: '380px', overflowY: 'auto'}}>
                         {filteredExpenses.map((expense) => (
                             <div key={expense.id} style={{
@@ -99,9 +99,9 @@ const ExpensesTracker = () => {
                                 padding:'0 10px 10px 10px',
                                 marginBottom:'10px'
                             }}>
-                              <p><b>Дата:</b> {expense.date}</p>
-                                <p><b>Сумма:</b> {expense.amount} руб.</p>
-                                <p><b>Категория:</b> {expense.category}</p>
+                              <p style={{margin:"15px 0 5px"}}><b>Дата:</b> {expense.date}</p>
+                                <p style={{margin:"10px 0 5px"}}><b>Сумма:</b> {expense.amount} руб.</p>
+                                <p style={{margin:"10px 0 15px"}}><b>Категория:</b> {expense.category}</p>
                                 <InterestingButton
                                     size="s"
                                     onClick={() => handleDeleteExpense(expense.id)}
